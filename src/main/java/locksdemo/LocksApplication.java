@@ -48,7 +48,7 @@ public class LocksApplication extends WebMvcConfigurerAdapter {
 		}
 	}
 
-	@ConditionalOnMissingClass(name="org.springframework.data.redis.connection.RedisConnectionFactory")
+	@ConditionalOnMissingClass(value="org.springframework.data.redis.connection.RedisConnectionFactory")
 	@Configuration
 	protected static class SimpleLockServiceConfiguration {
 		@Bean
